@@ -604,6 +604,23 @@ body {
     margin-bottom: 0;
 }
 
+.about-bio-centered {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--dark-gray);
+    text-align: center;
+}
+
+.about-bio-centered p {
+    margin-bottom: 1.5rem;
+}
+
+.about-bio-centered p:last-child {
+    margin-bottom: 0;
+}
+
 .contact {
     padding: 4rem 0;
     background-color: var(--white);
