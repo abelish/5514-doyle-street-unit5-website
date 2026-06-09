@@ -108,7 +108,29 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Contact form is handled by FormSubmit.co - no JavaScript needed
+// Contact Form - opens email client
+const contactForm = document.getElementById('contact-form');
+
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const date = document.getElementById('date').value;
+    const message = document.getElementById('message').value;
+
+    const subject = encodeURIComponent('Inquiry about Doyle Street Cohousing Condo');
+    const body = encodeURIComponent(
+        `Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Phone: ${phone}\n` +
+        `Preferred Viewing Date: ${date}\n\n` +
+        `Message:\n${message}`
+    );
+
+    window.location.href = `mailto:ahendlish@gmail.com?subject=${subject}&body=${body}`;
+});
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
