@@ -108,59 +108,7 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Contact Form
-const contactForm = document.getElementById('contact-form');
-const formStatus = document.getElementById('form-status');
-
-contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
-
-    // For GitHub Pages, you'll need to configure this with a service like:
-    // - Formspree (https://formspree.io)
-    // - Google Forms
-    // - Netlify Forms (if you switch to Netlify)
-
-    // Example with Formspree (you'll need to add your endpoint):
-    // const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
-
-    try {
-        // Simulated form submission for now
-        formStatus.textContent = 'Thank you for your interest! We will contact you soon.';
-        formStatus.className = 'form-status success';
-        contactForm.reset();
-
-        // To actually send emails, uncomment and configure this:
-        /*
-        const response = await fetch(FORMSPREE_ENDPOINT, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        });
-
-        if (response.ok) {
-            formStatus.textContent = 'Thank you for your interest! We will contact you soon.';
-            formStatus.className = 'form-status success';
-            contactForm.reset();
-        } else {
-            throw new Error('Form submission failed');
-        }
-        */
-
-    } catch (error) {
-        formStatus.textContent = 'Sorry, there was an error. Please try again or contact us directly.';
-        formStatus.className = 'form-status error';
-    }
-
-    setTimeout(() => {
-        formStatus.style.display = 'none';
-    }, 5000);
-});
-
+// Contact form is handled by FormSubmit.co - no JavaScript needed
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
