@@ -626,6 +626,18 @@ body {
     background-color: var(--white);
 }
 
+.google-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.google-form-container iframe {
+    display: block;
+}
+
 .contact-form {
     max-width: 800px;
     margin: 0 auto;
