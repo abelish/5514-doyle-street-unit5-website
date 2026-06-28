@@ -73,13 +73,23 @@ galleryNavButtons.forEach(btn => {
     });
 });
 
-// Hero image click to open unit gallery
-const heroImage = document.querySelector('.hero-image img');
-if (heroImage) {
-    heroImage.addEventListener('click', () => {
-        openLightbox('unit', 4); // Opens at the hero photo (index 4 in unit gallery)
+// Highlight card photo clicks
+document.querySelectorAll('.highlight-photo[data-gallery]').forEach(photo => {
+    photo.style.cursor = 'pointer';
+    photo.addEventListener('click', () => {
+        openLightbox(photo.dataset.gallery, parseInt(photo.dataset.index));
     });
-    heroImage.style.cursor = 'pointer'; // Make it clear the image is clickable
+});
+
+// Hero image clicks
+const heroImages = document.querySelectorAll('.hero-image img');
+if (heroImages[0]) {
+    heroImages[0].addEventListener('click', () => openLightbox('unit', 4));
+    heroImages[0].style.cursor = 'pointer';
+}
+if (heroImages[1]) {
+    heroImages[1].addEventListener('click', () => openLightbox('community', 1));
+    heroImages[1].style.cursor = 'pointer';
 }
 
 // Cohousing hero image click to open community gallery
@@ -108,7 +118,25 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Contact form is now handled by Google Forms// Smooth scrolling for anchor links
+// Active nav highlighting
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.side-menu a[href^="#"]');
+
+const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            navLinks.forEach(link => link.classList.remove('active'));
+            const activeLink = document.querySelector(`.side-menu a[href="#${entry.target.id}"]`);
+            if (activeLink) activeLink.classList.add('active');
+        }
+    });
+}, { rootMargin: '-30% 0px -60% 0px' });
+
+sections.forEach(section => sectionObserver.observe(section));
+
+// Contact form is now handled by Google Forms
+
+// Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();

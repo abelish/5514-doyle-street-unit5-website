@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="2BR/1BA loft-style condo at Doyle Street Cohousing in Emeryville. Community living with hot tub, gym, and more. $749,000.">
+    <meta name="description" content="2BR/1BA loft-style condo at Doyle Street Cohousing in Emeryville. Community living with hot tub, gym, and more. $799,000.">
     <title>Doyle Street Cohousing - 2BR/1BA Condo For Sale</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -28,11 +31,16 @@
         </div>
         <div class="hero-image">
             <img src="images/Unit 5/Unit 5 dining room view to loft.jpg" alt="Dining room view to loft">
+            <img src="images/Community/DSCA common house entrance and fountain.jpg" alt="Common house entrance and fountain">
         </div>
         <div class="hero-text">
             <h1>Sunny Emeryville Cohousing Condo<br/>2 bdrm / 1 bath for SALE BY OWNER</h1>
             <p class="hero-description">Find your community living in a spacious, sunny, loft-style condo at Doyle Street Cohousing. Your top-floor unit has large windows, high ceilings, skylights, hardwood and tile floors, and a renovated bathroom. Our diverse, multigenerational community consists of twelve private homes with many shared amenities, in the heart of the San Francisco Bay Area.</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd9Ed2g136-j-Ac1aoptayOYRSHrHEfsPRhq9YKjz9kLNl9FQ/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="cta-button">Contact Owner</a>
+            <p class="hero-longevity">We're looking for someone who wants to put down roots here the way we did.</p>
+            <div class="hero-cta-group">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd9Ed2g136-j-Ac1aoptayOYRSHrHEfsPRhq9YKjz9kLNl9FQ/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="cta-button">Contact Owner</a>
+                <a href="#community-dinner" class="cta-button cta-button-secondary">Come to dinner first</a>
+            </div>
         </div>
     </section>
 
@@ -40,26 +48,48 @@
         <div class="container">
             <div class="highlight-grid">
                 <div class="highlight-item">
-                    <span class="highlight-icon">🛏️</span>
-                    <h3>Bedrooms</h3>
-                    <p>2 Bedrooms</p>
+                    <div class="highlight-photo" data-gallery="unit" data-index="5">
+                        <img src="images/Unit 5/Unit 5 master.jpg" alt="Master bedroom">
+                    </div>
+                    <div class="highlight-info">
+                        <h3>Bedrooms</h3>
+                        <p>2 Bedrooms</p>
+                    </div>
                 </div>
                 <div class="highlight-item">
-                    <span class="highlight-icon">🚿</span>
-                    <h3>Bathrooms</h3>
-                    <p>1 Full Bath</p>
+                    <div class="highlight-photo" data-gallery="unit" data-index="7">
+                        <img src="images/Unit 5/Unit 5 bathroom 1.JPG" alt="Bathroom">
+                    </div>
+                    <div class="highlight-info">
+                        <h3>Bathrooms</h3>
+                        <p>1 Full Bath</p>
+                    </div>
                 </div>
                 <div class="highlight-item">
-                    <span class="highlight-icon">📏</span>
-                    <h3>Size</h3>
-                    <p>1,350 sq ft</p>
+                    <div class="highlight-photo" data-gallery="unit" data-index="2">
+                        <img src="images/Unit 5/Unit 5 dining room and kitchen viewed from loft.jpg" alt="Dining room and kitchen from loft">
+                    </div>
+                    <div class="highlight-info">
+                        <h3>Size</h3>
+                        <p>1,350 sq ft</p>
+                    </div>
                 </div>
                 <div class="highlight-item">
-                    <span class="highlight-icon">💰</span>
-                    <h3>Price</h3>
-                    <p>$799,000</p>
+                    <div class="highlight-photo" data-gallery="unit" data-index="0">
+                        <img src="images/Unit 5/Unit 5 living room view to windows and office nook.jpg" alt="Living room">
+                    </div>
+                    <div class="highlight-info">
+                        <h3>Price</h3>
+                        <p>$799,000</p>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="tenant-notice-banner">
+        <div class="container">
+            <p><strong>Currently tenant-occupied:</strong> The current resident is in the process of buying a home and will move out within 3–12 months. We're looking for buyers open to a short rent-back — meaning <strong>rental income from day one</strong> and a graceful transition for everyone. <a href="#sale-terms">Full details below.</a></p>
         </div>
     </section>
 
@@ -173,6 +203,14 @@
         </div>
     </div>
 
+    <section class="why-cohousing">
+        <div class="container">
+            <h2>Is Cohousing For You?</h2>
+            <p>If you've ever wished you knew your neighbors better or wanted a built-in community without sacrificing your own space and privacy, this might be exactly what you've been looking for.</p>
+            <p>Doyle Street cohousing builds community intentionally through optional shared meals, planned and spontaneous community-building activities, and caring for our shared spaces together.</p>
+        </div>
+    </section>
+
     <section id="cohousing" class="cohousing">
         <div class="container">
             <h2>About Doyle Street Cohousing</h2>
@@ -188,14 +226,17 @@
                 </div>
                 <div class="cohousing-item">
                     <h3>Shared Responsibilities</h3>
-                    <p>4 hours/month community maintenance, 1.5-hour monthly HOA meetings, and 12 hours/year workdays</p>
+                    <p>About 6 hours a month in total — all scheduled in advance. That breaks down to 4 hours of community maintenance, a 1.5-hour monthly HOA meeting, and 12 hours per year — divided as you see fit — of shared community maintenance.</p>
                 </div>
                 <div class="cohousing-item">
                     <h3>Community Governance</h3>
                     <p>Every adult resident is a full voting member of the Doyle Street Cohousing Association (DSCA)</p>
                 </div>
             </div>
-            <p class="cohousing-mission-link">View our statement of mission and values <a href="https://drive.google.com/file/d/1nil8lV14OoBdOzkwB7v1-4R92EMruJCO/view?usp=drive_link" target="_blank" rel="noopener noreferrer">HERE</a></p>
+            <div class="cohousing-mission-link">
+                <p>Wondering if Doyle Street Cohousing is the right fit?</p>
+                <a href="https://drive.google.com/file/d/1nil8lV14OoBdOzkwB7v1-4R92EMruJCO/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="mission-button">Read Our Mission &amp; Values</a>
+            </div>
         </div>
     </section>
 
@@ -205,6 +246,7 @@
             <div class="details-grid">
                 <div class="details-column">
                     <h3>Unit Features</h3>
+                    <button class="gallery-nav-btn details-gallery-btn" data-gallery="unit">View Unit Photos</button>
                     <ul>
                         <li>Loft-style top floor unit</li>
                         <li>High ceilings with skylights</li>
@@ -222,12 +264,13 @@
                 </div>
                 <div class="details-column">
                     <h3>Community Amenities</h3>
+                    <button class="gallery-nav-btn details-gallery-btn" data-gallery="community">View Community Photos</button>
                     <ul>
                         <li>Hot tub</li>
                         <li>Community gym with Peloton bike & weight bench</li>
                         <li>BBQ grill and patio dining area</li>
                         <li>Ping pong table</li>
-                        <li>EV charging station</li>
+                        <li>EV charging stations</li>
                         <li>Laundry room</li>
                         <li>Bike storage & workshop with shared tools</li>
                         <li>Common house for private & community events</li>
@@ -238,6 +281,7 @@
                 </div>
                 <div class="details-column">
                     <h3>Location</h3>
+                    <button class="gallery-nav-btn details-gallery-btn" data-gallery="neighborhood">View Neighborhood Photos</button>
                     <ul>
                         <li>Centrally located in the Bay Area</li>
                         <li>Doyle Street Greenway Bike Route</li>
@@ -274,7 +318,7 @@
                 </ul>
             </div>
 
-            <div class="community-process">
+            <div class="community-process" id="community-dinner">
                 <h3>Community Oriented Process</h3>
                 <p>For buyers considering making an offer, we invite you to join us at a community meal and one of our monthly HOA meetings to get to know your future neighbors and catch a glimpse of community life.</p>
             </div>
@@ -284,9 +328,14 @@
     <section id="about-us" class="about-us">
         <div class="container">
             <h2>About Us</h2>
-            <div class="about-bio-centered">
-                <p>The ten years we spent living in cohousing are filled with happy memories. From spontaneous game nights, to community dance parties, movies in the common house, water balloon fights in the parking lot, and on one particularly memorable occasion a pig roast complete with fire spinning, we cherish the connection and community that is unique to cohousing.</p>
-                <p>This community is important to us. It is our goal to make the sale process as human as possible while still adhering to standard protocols and protections for all parties involved. We are looking for a buyer who shares the values intrinsic to cohousing and genuinely desires to live in community.</p>
+            <div class="about-content">
+                <div class="about-photo">
+                    <img src="images/us.jpg" alt="The owners">
+                </div>
+                <div class="about-bio">
+                    <p>The ten years we spent living in Doyle Street cohousing are filled with happy memories. From spontaneous game nights to community dance parties, movies in the common house, water balloon fights in the parking lot, and on one particularly memorable occasion a pig roast complete with fire spinning, we cherish the connection and community that is unique to cohousing.</p>
+                    <p>This community is important to us. It is our goal to make the sale process as human as possible while still adhering to standard protocols and protections for all parties involved. We are looking for a buyer who shares the values intrinsic to cohousing and genuinely desires to live in community.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -299,6 +348,15 @@
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>5514 Doyle Street, Unit 5 &nbsp;·&nbsp; Emeryville, CA 94608</p>
+            <p style="margin-top: 0.75rem;">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd9Ed2g136-j-Ac1aoptayOYRSHrHEfsPRhq9YKjz9kLNl9FQ/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" style="color: #a8c8e8; text-decoration: underline;">Contact the Owners</a>
+            </p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
